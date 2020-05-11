@@ -1,0 +1,57 @@
+body {
+  /* nome de cor ou código em hexadecimal */
+  background: #4499ff;
+  /* colocar imagem da internet de fundo */
+  /* background-image: url('https://s3.cointelegraph.com/storage/uploads/view/bad02e8b57a64d349aa5eec318298b4b.png'); */
+  /* largura automática e 100% do tamanho total da tela */
+  background-size: auto 100vh;
+  /*  fonte do texto  */
+  font-family: Arial;
+  /* altura da página */
+  height: 100vh;
+}
+
+/* chamar um elemento que tem uma classe */
+.menu {
+  background-color: white;
+}
+
+/* todas as li's da classe menu, receberão esse estilo */
+/* tira os pontinhos do menu */
+.menu li {
+  list-style: none;
+}
+
+/* flex -> força virar coluna */
+/* justify-content ajusta o espaçamento entre os itens */
+/* justify-content só funciona em conjunto com outra propriedade */
+.menu ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+/* mudar todo o comportamento da tag "a" no código */
+/* "a" é link */
+/* passar o mouse em cima do link, vai ficar em negrito */
+a {
+  color: teal;
+  /* tirar underline */
+  text-decoration: none;
+}
+
+/* anotação especial da pseudo classe */
+/* quando o mouse passar em cima, aparecer underline */
+a:hover {
+  text-decoration: underline;
+}
+
+/* os dois seletores pegam as mesmas propriedades, dessa forma */
+.site-subtitle,
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-subtitle {
+  font-style: italic;
+}
