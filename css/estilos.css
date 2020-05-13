@@ -13,7 +13,7 @@ terá um desenho que mostra os nomes das margens do site */
 
 body {
   /* nome de cor ou código em hexadecimal */
-  background: #4499ff;
+  /* background: #4499ff; */
   /* colocar imagem da internet de fundo */
   /* background-image: url('https://s3.cointelegraph.com/storage/uploads/view/bad02e8b57a64d349aa5eec318298b4b.png'); */
   /* imagem de dentro da pasta img */
@@ -21,7 +21,8 @@ body {
   /* largura automática e 100% do tamanho total da tela */
   /* background-size: auto 100vh; */
   /*  fonte do texto  */
-  font-family: Arial;
+  /* font-family: Arial; */
+  font-family: 'Source Code Pro', monospace;
   /* altura da página */
   height: 100vh;
   /* background-repeat: no-repeat; */
@@ -120,7 +121,6 @@ a:hover {
 }
 
 /* os seletores pegam as mesmas propriedades, dessa forma */
-.portfolio-section,
 .site-subtitle,
 .site-title {
   color: whitesmoke;
@@ -131,26 +131,73 @@ a:hover {
   /* 4 vezes o tamanho da fonte */
   /* unidade relativa de tamanho, seguindo como referência o tamanho da tela */
   font-size: 4em;
+  /* fonte do texto */
+  font-family: 'Indie Flower', cursive;
 }
 
 .site-subtitle {
   font-style: italic;
+  line-height: 1.8em;
+}
+
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* selecionar todos os elementos com a classe grid que estão dentro do 
+elemento portfólio */
+.portfolio .grid {
+  display: grid;
+  /* propriedades específicas do grid */
+  /* espaçamento entre cada coluna ou linha do grid */
+  gap: 2em;
+  color: aliceblue;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    /* quantas colunas eu quero, e controlar a largura de cada coluna */
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    /* 1° parâmetro: número de repetições 
+    2° parâmetro: tamanho da coluna em pixels */
+    grid-template-columns: repeat(3, 260);
+    align-content: center;
+    justify-content: center;
+    /* cálculo para o cess exibir da forma correta */
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
 }
 
 .img-portfolio {
   max-width: 180px;
   max-height: 180px;
-  width: auto;
   height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-figcaption {
-  color: whitesmoke;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 6em;
+  width: auto;
+  /* height: 180px; */
+  /* width: 240px; */
+  /* object-fit: cover; */
+  /* object-position: left bottom; */
+  /* arredondar a borda */
+  border-radius: 10%;
+  /* display: block; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
 }
