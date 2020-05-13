@@ -14,10 +14,11 @@ terá um desenho que mostra os nomes das margens do site */
 body {
   /* nome de cor ou código em hexadecimal */
   /* background: #4499ff; */
+  background-color: white;
   /* colocar imagem da internet de fundo */
   /* background-image: url('https://s3.cointelegraph.com/storage/uploads/view/bad02e8b57a64d349aa5eec318298b4b.png'); */
   /* imagem de dentro da pasta img */
-  background-image: url('../img/black-1072366.jpg');
+  /* background-image: url('../img/black-1072366.jpg'); */
   /* largura automática e 100% do tamanho total da tela */
   /* background-size: auto 100vh; */
   /*  fonte do texto  */
@@ -70,7 +71,7 @@ header {
 
 /* chamar um elemento que tem uma classe */
 .menu {
-  background-color: white;
+  background-color: rgb(225, 231, 238);
   /* mexe no eixo z da tela, posição onde as coisas podem
    ficar à frente das outras */
   position: fixed;
@@ -123,7 +124,7 @@ a:hover {
 /* os seletores pegam as mesmas propriedades, dessa forma */
 .site-subtitle,
 .site-title {
-  color: whitesmoke;
+  color: black;
   text-align: center;
 }
 
@@ -147,7 +148,7 @@ a:hover {
 
 .portfolio h2 {
   font-family: 'Press Start 2P', cursive;
-  color: whitesmoke;
+  color: black;
   margin-bottom: 1.5em;
   font-size: 2em;
   text-align: center;
@@ -160,7 +161,7 @@ elemento portfólio */
   /* propriedades específicas do grid */
   /* espaçamento entre cada coluna ou linha do grid */
   gap: 2em;
-  color: aliceblue;
+  color: black;
 }
 
 @media (min-width: 560px) {
