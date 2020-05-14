@@ -80,16 +80,8 @@ header {
   /* colar o menu na parte superior da página */
   /* distância 0 do topo da página */
   top: 0;
-}
-
-/* elemento inline, não quebra linha */
-/* configurar os botões do menu */
-.menu a {
-  /* "a" -> elementos inline não conseguem receber o padding, 
-  por isso temos de transformá-lo em bloco */
-  display: block;
-  /* afastar o conteúdo de texto das bordas */
-  padding: 10px 20px;
+  /* prioridade */
+  z-index: 1;
 }
 
 /* todas as li's da classe menu, receberão esse estilo */
@@ -104,6 +96,24 @@ header {
 .menu ul{
   display: flex;
   justify-content: space-around;
+}
+
+/* elemento inline, não quebra linha */
+/* configurar os botões do menu */
+.menu a {
+  /* "a" -> elementos inline não conseguem receber o padding, 
+  por isso temos de transformá-lo em bloco */
+  display: block;
+  /* afastar o conteúdo de texto das bordas */
+  padding: 10px 20px;
+  /* quais propriedades queremos mudar no elemento */
+  transition: background-color 0.8s, color 0.8s;
+}
+
+.menu a:active, 
+.menu a:hover {
+  background-color: teal;
+  color: white;
 }
 
 /* mudar todo o comportamento da tag "a" no código */
@@ -121,6 +131,24 @@ a:hover {
   text-decoration: underline;
 }
 
+.titulo {
+  /* forwards mantém o último estado da animação */
+  animation: linear 2s AnimacaoTitulo forwards;
+}
+
+@keyframes AnimacaoTitulo {
+  /* estado inicial da animação */
+  0% {
+    /* transparência do elemento */
+    opacity: 0;
+  }
+  /* estado final da animação */
+  100% {
+    /* transparência do elemento */
+    opacity: 1;
+  }
+}
+
 /* os seletores pegam as mesmas propriedades, dessa forma */
 .site-subtitle,
 .site-title {
@@ -133,7 +161,7 @@ a:hover {
   /* unidade relativa de tamanho, seguindo como referência o tamanho da tela */
   font-size: 4em;
   /* fonte do texto */
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Lora', serif;
 }
 
 .site-subtitle {
@@ -141,13 +169,15 @@ a:hover {
   line-height: 1.8em;
 }
 
+.contato,
 .portfolio {
   padding: 2em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
+.contato h2,
 .portfolio h2 {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Fredericka the Great', cursive;
   color: black;
   margin-bottom: 1.5em;
   font-size: 2em;
@@ -197,8 +227,64 @@ elemento portfólio */
   /* object-fit: cover; */
   /* object-position: left bottom; */
   /* arredondar a borda */
-  border-radius: 10%;
+  /* border-radius: 10%; */
   /* display: block; */
   /* margin-left: auto; */
   /* margin-right: auto; */
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+  /* transforma o elemento */
+  /* deg = degrees */
+  /* transform: scale(1.2) rotate(45deg); */
+  transform: scale(1.2);
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: black;
+  font-size: 1.7em;
+  transition: text-shadow 0.8s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  /* text-shadow: 0px 0px 10px indigo; */
+  /* text-shadow: 0px 0px 10px rgb(217, 38, 253); */
+  /* text-shadow: 0px 0px 10px rgba(77, 77, 252, 1); */
+}
+
+.fa-github:active,
+.fa-github:hover {
+  transition: text-shadow 0.8s;
+  text-shadow: 0px 0px 10px rgb(36, 36, 43);
+}
+
+.fa-twitter:active,
+.fa-twitter:hover {
+  transition: text-shadow 0.8s;
+  text-shadow: 0px 0px 10px rgb(33, 203, 255);
+}
+
+.fa-linkedin-in:active,
+.fa-linkedin-in:hover {
+  transition: text-shadow 0.8s;
+  text-shadow: 0px 0px 10px rgb(0, 80, 252);
+}
+
+.fa-envelope:active,
+.fa-envelope:hover {
+  transition: text-shadow 0.8s;
+  text-shadow: 0px 0px 10px red;
+}
+
+.fa-instagram:active,
+.fa-instagram:hover {
+  transition: text-shadow 0.8s;
+  text-shadow: 0px 0px 10px rgb(247, 11, 247);
 }
