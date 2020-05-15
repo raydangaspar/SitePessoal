@@ -170,22 +170,25 @@ a:hover {
 }
 
 .contato,
+.educacao,
 .portfolio {
   padding: 2em;
   min-height: 100vh;
 }
 
 .contato h2,
+.educacao h2,
 .portfolio h2 {
   font-family: 'Fredericka the Great', cursive;
   color: black;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   font-size: 2em;
   text-align: center;
 }
 
 /* selecionar todos os elementos com a classe grid que estão dentro do 
 elemento portfólio */
+.educacao .grid,
 .portfolio .grid {
   display: grid;
   /* propriedades específicas do grid */
@@ -195,6 +198,7 @@ elemento portfólio */
 }
 
 @media (min-width: 560px) {
+  .educacao .grid,
   .portfolio .grid {
     /* quantas colunas eu quero, e controlar a largura de cada coluna */
     grid-template-columns: 240px 240px;
@@ -202,6 +206,7 @@ elemento portfólio */
 }
 
 @media (min-width: 880px) {
+  .educacao .grid,
   .portfolio .grid {
     /* 1° parâmetro: número de repetições 
     2° parâmetro: tamanho da coluna em pixels */
@@ -213,13 +218,15 @@ elemento portfólio */
   }
 }
 
+.educacao figure,
 .portfolio figure {
   text-align: center;
 }
 
+.img-educacao,
 .img-portfolio {
+  max-height: 90px;
   max-width: 180px;
-  max-height: 180px;
   height: auto;
   width: auto;
   /* height: 180px; */
@@ -234,6 +241,7 @@ elemento portfólio */
   transition: transform 500ms;
 }
 
+.img-educacao:hover,
 .img-portfolio:hover {
   /* transforma o elemento */
   /* deg = degrees */
@@ -251,6 +259,12 @@ elemento portfólio */
   transition: text-shadow 0.8s;
 }
 
+.educacao a {
+  color: black;
+}
+
+.educacao a:active,
+.educacao a:hover,
 .contato a:active,
 .contato a:hover {
   text-decoration: none;
