@@ -232,6 +232,16 @@ a:hover {
   }
 }
 
+@media (min-width: 1000px) and (min-height: 500px) {
+  .educacao .grid,
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 200px);
+  }
+}
+
 @media (min-width: 1920px) {
   .educacao .grid,
   .portfolio .grid {
