@@ -16,7 +16,7 @@
   <header>
     <!-- cabeçalho -->
     <nav class="menu">
-      <ul>
+      <ul class="container">
         <!-- lista -->
         <li><a href="#sobre">Sobre</a></li> <!-- elementos lista -->
         <li><a href="#educacao">Educação</a></li>
@@ -31,13 +31,45 @@
       <h2 class="site-subtitle">Student</h2>
     </div>
   </header>
-  <section class="portfolio" id="portfolio">
+  <section class="sobre container">
+    <h2>Sobre</h2>
+
+    <figure class="avatar">
+      <img src="./img/dan.jpg" alt="Raydan Gaspar">
+    </figure>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Assumenda maiores fugiat aliquid cumque rem quas hic. Nobis excepturi ad optio dolores veniam commodi consequatur, 
+      mollitia qui, atque libero nihil ut!
+    </p>
+
+    <p>    Deleniti omnis dolore rem velit impedit ipsum distinctio. Velit possimus veritatis doloribus, 
+      excepturi numquam nostrum cupiditate voluptatem reprehenderit nobis corporis quaerat at vero ea assumenda alias atque, 
+      dicta sapiente nam?
+    </p>
+
+    <p>
+      Aliquid animi necessitatibus vitae amet magni beatae dolorem doloribus debitis ea ipsa ut esse deleniti a facere placeat corporis, iure eum similique expedita hic, eligendi odit eius! Commodi, optio est?
+      Repudiandae atque sint voluptas nobis nemo sapiente similique necessitatibus eveniet dignissimos laboriosam ratione et, libero fuga accusantium, aliquid aspernatur. Est accusantium vitae minus, 
+      corporis cupiditate quasi vel eos porro placeat.
+    </p>
+    
+  </section>
+  <section class="portfolio container" id="portfolio">
     <h2>Portfólio</h2>
     <div class="grid">
-      <figure>
-        <img class="img-portfolio" src="./img/dccLogo.png" alt="Graduação">
-        <figcaption>Graduação</figcaption>
-      </figure>
+      <div class="flip-card">
+        <div class="card">
+          <figure class="card-front">
+            <img class="img-portfolio" src="./img/dccLogo.png" alt="Graduação">
+            <figcaption>Graduação</figcaption>
+          </figure>
+          <div class="card-back">
+            Sou a parte de trás
+          </div>
+        </div>
+      </div>
       <figure>
         <img class="img-portfolio" src="./img/python-logo-master-v3-TM.png" alt=">Python">
         <figcaption>Python</figcaption>
@@ -52,7 +84,7 @@
       </figure>
     </div>
   </section>
-  <section class="educacao" id="educacao">
+  <section class="educacao container" id="educacao">
     <h2>Educação</h2>
     <div class="grid">
       <figure>
@@ -75,7 +107,7 @@
       </figure>
     </div>
   </section>
-  <section class="contato" id="contato">
+  <section class="contato container" id="contato">
     <h2>Contato</h2>
     <div class="grid icons">
       <a target="_blank" href="https://github.com/raydangaspar">
