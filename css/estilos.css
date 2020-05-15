@@ -210,10 +210,10 @@ elemento portfólio */
   .portfolio .grid {
     /* 1° parâmetro: número de repetições 
     2° parâmetro: tamanho da coluna em pixels */
-    grid-template-columns: repeat(3, 260);
+    grid-template-columns: repeat(3, 260px);
     align-content: center;
     justify-content: center;
-    /* cálculo para o cess exibir da forma correta */
+    /* cálculo para o css exibir da forma correta */
     height: calc(100vh - 8em - 48px);
   }
 }
@@ -259,12 +259,6 @@ elemento portfólio */
   transition: text-shadow 0.8s;
 }
 
-.educacao a {
-  color: black;
-}
-
-.educacao a:active,
-.educacao a:hover,
 .contato a:active,
 .contato a:hover {
   text-decoration: none;
