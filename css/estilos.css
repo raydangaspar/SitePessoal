@@ -232,7 +232,7 @@ a:hover {
   }
 }
 
-@media (min-width: 1000px) and (min-height: 500px) {
+@media (min-width: 1000px) and (max-height: 720px) {
   .educacao .grid,
   .portfolio .grid {
     grid-template-columns: repeat(3, 260px);
