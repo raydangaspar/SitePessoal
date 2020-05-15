@@ -1,112 +1,62 @@
-/* abra o hmtl em um navegador, clique em inspecionar página, 
-terá um desenho que mostra os nomes das margens do site */
-/* seletor mais genérico, fica na linha 1 */
-/* soft reset do css */
 * {
-  /* ignorar qualquer margem */
   margin: 0;
-  /* espaçamento interno, entre a borda e o conteúdo de dentro da caixa */
   padding: 0;
-  /* começa a contar o tamanho do elemento a partir da borda interna da caixa */
   box-sizing: border-box;
 }
 
 body {
-  /* nome de cor ou código em hexadecimal */
-  /* background: #4499ff; */
   background-color: white;
-  /* colocar imagem da internet de fundo */
-  /* background-image: url('https://s3.cointelegraph.com/storage/uploads/view/bad02e8b57a64d349aa5eec318298b4b.png'); */
-  /* imagem de dentro da pasta img */
-  /* background-image: url('../img/black-1072366.jpg'); */
-  /* largura automática e 100% do tamanho total da tela */
-  /* background-size: auto 100vh; */
-  /*  fonte do texto  */
-  /* font-family: Arial; */
   font-family: 'Source Code Pro', monospace;
-  /* altura da página */
   height: 100vh;
-  /* background-repeat: no-repeat; */
   background-repeat: round;
   background-size: cover;
 }
 
-/* breakpoint */
-/* condição do meu if; condição do navegador que a tela será aberta */
-/* selecionar o estilo da página de acordo com faixas de tamanhos de tela */
-/* se minha tela tiver no mínimo 400 pixels, vai carregar estes estilos */
 @media (min-width: 400px) {
-  /* o que quero modificar */
   body {
     font-size: 14px;
   }
 }
 
-/* breakpoint */
 @media (min-width: 600px) {
-  /* o que quero modificar */
   body {
     font-size: 16px;
   }
 }
 
-/* breakpoint */
 @media (min-width: 1200px) {
-  /* o que quero modificar */
   body {
     font-size: 18px;
   }
 }
 
 header {
-  /* 100% do view cort */
   height: 100vh;
-  /* flex faz todo mundo virar coluna */
-  /* header virou um flex container */
   display: flex;
-  /* centralizar o header */
   justify-content: center;
   align-items: center;
 }
 
-/* chamar um elemento que tem uma classe */
 .menu {
   background-color: rgb(225, 231, 238);
-  /* mexe no eixo z da tela, posição onde as coisas podem
-   ficar à frente das outras */
   position: fixed;
-  /* vw = view port width */
   width: 100vw;
-  /* colar o menu na parte superior da página */
-  /* distância 0 do topo da página */
   top: 0;
-  /* prioridade */
   z-index: 1;
 }
 
-/* todas as li's da classe menu, receberão esse estilo */
-/* tira os pontinhos do menu */
 .menu li {
   list-style: none;
 }
 
-/* flex -> força virar coluna */
-/* justify-content ajusta o espaçamento entre os itens */
-/* justify-content só funciona em conjunto com outra propriedade */
 .menu ul{
   display: flex;
   justify-content: space-around;
 }
 
-/* elemento inline, não quebra linha */
-/* configurar os botões do menu */
 .menu a {
-  /* "a" -> elementos inline não conseguem receber o padding, 
-  por isso temos de transformá-lo em bloco */
   display: block;
-  /* afastar o conteúdo de texto das bordas */
   padding: 10px 20px;
-  /* quais propriedades queremos mudar no elemento */
   transition: background-color 0.8s, color 0.8s;
 }
 
@@ -116,40 +66,28 @@ header {
   color: white;
 }
 
-/* mudar todo o comportamento da tag "a" no código */
-/* "a" é link */
-/* passar o mouse em cima do link, vai ficar em negrito */
 a {
   color: teal;
-  /* tirar underline */
   text-decoration: none;
 }
 
-/* anotação especial da pseudo classe */
-/* quando o mouse passar em cima, aparecer underline */
 a:hover {
   text-decoration: underline;
 }
 
 .titulo {
-  /* forwards mantém o último estado da animação */
   animation: linear 2s AnimacaoTitulo forwards;
 }
 
 @keyframes AnimacaoTitulo {
-  /* estado inicial da animação */
   0% {
-    /* transparência do elemento */
     opacity: 0;
   }
-  /* estado final da animação */
   100% {
-    /* transparência do elemento */
     opacity: 1;
   }
 }
 
-/* os seletores pegam as mesmas propriedades, dessa forma */
 .site-subtitle,
 .site-title {
   color: black;
@@ -157,10 +95,7 @@ a:hover {
 }
 
 .site-title {
-  /* 4 vezes o tamanho da fonte */
-  /* unidade relativa de tamanho, seguindo como referência o tamanho da tela */
   font-size: 4em;
-  /* fonte do texto */
   font-family: 'Lora', serif;
 }
 
@@ -216,18 +151,11 @@ a:hover {
 
 .sobre .avatar img {
   border-radius: 50%;
-  /* https://caniuse.com/ */
-  /* https://bennettfeely.com/clippy/ */
-  /* clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%); */
 }
 
-/* selecionar todos os elementos com a classe grid que estão dentro do 
-elemento portfólio */
 .educacao .grid,
 .portfolio .grid {
   display: grid;
-  /* propriedades específicas do grid */
-  /* espaçamento entre cada coluna ou linha do grid */
   gap: 2em;
   color: black;
 }
@@ -235,7 +163,6 @@ elemento portfólio */
 @media (min-width: 560px) {
   .educacao .grid,
   .portfolio .grid {
-    /* quantas colunas eu quero, e controlar a largura de cada coluna */
     grid-template-columns: 240px 240px;
   }
 }
@@ -243,12 +170,9 @@ elemento portfólio */
 @media (min-width: 880px) {
   .educacao .grid,
   .portfolio .grid {
-    /* 1° parâmetro: número de repetições 
-    2° parâmetro: tamanho da coluna em pixels */
     grid-template-columns: repeat(3, 260px);
     align-content: center;
     justify-content: center;
-    /* cálculo para o css exibir da forma correta */
     height: calc(100vh - 8em - 48px);
   }
 }
@@ -264,50 +188,38 @@ elemento portfólio */
   max-width: 180px;
   height: auto;
   width: auto;
-  /* height: 180px; */
-  /* width: 100%; testar esse depois */ 
-  /* object-fit: cover; */
-  /* object-position: left bottom; */
-  /* arredondar a borda */
-  /* border-radius: 10%; */
-  /* display: block; */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
   transition: transform 500ms;
 }
 
 .img-educacao:hover,
 .img-portfolio:hover {
-  /* transforma o elemento */
-  /* deg = degrees */
-  /* transform: scale(1.2) rotate(45deg); */
   transform: scale(1.2);
 }
 
-.flip-card {
-  perspective: 1000px;
+.flip-avatar {
+  perspective: 500px;
 }
 
-.card {
+.flip-avatar:hover .avatar {
+  transform: rotateY(180deg);
+}
+
+.avatar {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 3s;
 }
 
-.flip-card:hover .card {
-  transform: rotateY(180deg);
-}
-
-.card-front, 
-.card-back {
+.avatar-front, 
+.avatar-back {
   backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100;
+  width: 100%;
 }
 
-.card-back {
+.avatar-back {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,9 +242,6 @@ elemento portfólio */
 .contato a:active,
 .contato a:hover {
   text-decoration: none;
-  /* text-shadow: 0px 0px 10px indigo; */
-  /* text-shadow: 0px 0px 10px rgb(217, 38, 253); */
-  /* text-shadow: 0px 0px 10px rgba(77, 77, 252, 1); */
 }
 
 .fa-github:active,
