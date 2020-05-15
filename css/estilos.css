@@ -199,6 +199,52 @@ a:hover {
   transform: rotateY(180deg);
 } */
 
+.contato .icons {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.contato a {
+  color: black;
+  font-size: 1.7em;
+  transition: text-shadow 0.8s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+}
+
+.fa-github:active,
+.fa-github:hover {
+  transition: text-shadow 0.8s;
+  text-shadow: 0px 0px 10px rgb(36, 36, 43);
+}
+
+.fa-twitter:active,
+.fa-twitter:hover {
+  transition: text-shadow 0.8s;
+  text-shadow: 0px 0px 10px rgb(33, 203, 255);
+}
+
+.fa-linkedin-in:active,
+.fa-linkedin-in:hover {
+  transition: text-shadow 0.8s;
+  text-shadow: 0px 0px 10px rgb(0, 80, 252);
+}
+
+.fa-envelope:active,
+.fa-envelope:hover {
+  transition: text-shadow 0.8s;
+  text-shadow: 0px 0px 10px red;
+}
+
+.fa-instagram:active,
+.fa-instagram:hover {
+  transition: text-shadow 0.8s;
+  text-shadow: 0px 0px 10px rgb(247, 11, 247);
+}
+
 @media (min-width: 300px) {
   .container {
     margin-left: auto;
@@ -235,6 +281,12 @@ a:hover {
     align-content: center;
     justify-content: center;
     height: calc(100vh - 8em - 600px);
+  }
+}
+
+@media (max-width: 750px) {
+  .contato .icons {
+    font-size: 1.5em;
   }
 }
 
@@ -299,49 +351,4 @@ a:hover {
     justify-content: center;
     height: calc(100vh - 8em - 600px);
   }
-}
-
-.contato .icons {
-  text-align: center;
-}
-
-.contato a {
-  color: black;
-  font-size: 1.7em;
-  transition: text-shadow 0.8s;
-}
-
-.contato a:active,
-.contato a:hover {
-  text-decoration: none;
-}
-
-.fa-github:active,
-.fa-github:hover {
-  transition: text-shadow 0.8s;
-  text-shadow: 0px 0px 10px rgb(36, 36, 43);
-}
-
-.fa-twitter:active,
-.fa-twitter:hover {
-  transition: text-shadow 0.8s;
-  text-shadow: 0px 0px 10px rgb(33, 203, 255);
-}
-
-.fa-linkedin-in:active,
-.fa-linkedin-in:hover {
-  transition: text-shadow 0.8s;
-  text-shadow: 0px 0px 10px rgb(0, 80, 252);
-}
-
-.fa-envelope:active,
-.fa-envelope:hover {
-  transition: text-shadow 0.8s;
-  text-shadow: 0px 0px 10px red;
-}
-
-.fa-instagram:active,
-.fa-instagram:hover {
-  transition: text-shadow 0.8s;
-  text-shadow: 0px 0px 10px rgb(247, 11, 247);
 }
